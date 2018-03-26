@@ -1,0 +1,8 @@
+Queries:
+1. Count the number of Items from category "Enesco"
+2. Count the number of Items (same as auctions) belonging to exactly four categories.
+3. Find the ID(s) of auction(s) with the maximum buy_price.
+4. Count the number of sellers whose rating is higher than 1000.
+5. Count the number of users who are both sellers and bidders.
+6. Count the number of categories that include at least one item with a bid of more than $1000.
+7. Count the number of sellers who sell items in more than 10 categories
