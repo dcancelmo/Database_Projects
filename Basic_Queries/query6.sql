@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT category) FROM Category NATURAL JOIN Bid AS Bid_Category WHERE amount>1000.00;

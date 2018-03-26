@@ -1,0 +1,2 @@
+Select Count(Distinct userID) from (SELECT DISTINCT userID FROM User NATURAL JOIN Item) AS Sellers NATURAL JOIN (SELECT DISTINCT userID FROM User NATURAL JOIN Bid) AS Buyer;
+
