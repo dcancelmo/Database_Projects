@@ -1,0 +1,2 @@
+//Insert a new item/auction with _id "88888888" and zero (0) bids. This auction/item must have a name and two categories. (Name and Categories values can be arbitrary)
+db.items.insert({_id: "88888888", Name: "CSC261", Category: ["Computer Science", "Rochester"], Number_of_Bids: 0});
