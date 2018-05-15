@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Delete Transaction</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Daniel Cancelmo; dcancelm">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Our CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styles_custom.css">
+		<!-- Normalize CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-lg px-3 my-5 markdown-body">
+			<h1>Reverse a transaction</h1>
+			<button class="btn btn-sm btn-info" id="return" onclick="window.location.replace('index.html')">Go back</button>
+			<form action="php/remove-transaction.php" method = "post">
+				<div class="row formQuestion">
+					<label for="pID">Product ID #</label><input type="text" name="pID" id="pID" placeholder = "Product ID" required>
+				</div>
+				<div class="row formQuestion">
+					<label for="phone">Phone</label>
+					<input type="phone" name="phone"  id="phone" placeholder = "5555555555" required>
+				</div>
+				<div class="row formQuestion">
+					<label for="timestamp">Timestamp</label><input type="text" name="timestamp" id="timestamp" placeholder = "YYYY-MM-DD HH:MM:SS" size="30" required>
+				</div>
+				<p class="warning">Please be sure before you delete. This action cannot be undone!</p>
+				<div class="row formQuestion">
+					<input class="btn btn-success" type="submit" value="Submit">
+				</div>
+				<!-- The database will auto generate a timestamp upon insertion to the database -->
+			</form>
+		</div>
+	</body>
+</html>

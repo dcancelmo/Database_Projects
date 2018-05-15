@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Search Transactions</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Daniel Cancelmo; dcancelm">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Our CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styles_custom.css">
+		<!-- Normalize CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-lg px-3 my-5 markdown-body">
+			<h1>Search for a transaction by any attribute</h1>
+			<button class="btn btn-sm btn-info" id="return" onclick="window.location.replace('index.html')">Go back</button>
+			<form action="php/search-transaction.php" method = "post">
+				<div class="row formQuestion">
+					<label for="pID">Product ID #</label><input type="text" name="pID" id="pID" placeholder = "Product ID">
+				</div>
+				<div class="row formQuestion">
+					<label for="timestamp">Timestamp</label><input type="text" name="timestamp" id="timestamp" placeholder = "YYYY-MM-DD HH:MM:SS" size="30">
+				</div>
+				<div class="row formQuestion">
+					<label for="url">URL sale location</label>
+					<input type="url" name="url"  id="url" placeholder = "http://www.URL.com" size="40">
+				</div>
+				<div class="row formQuestion">
+					<label for="phone">Phone</label>
+					<input type="phone" name="phone"  id="phone" placeholder = "5555555555">
+				</div>
+				<div class="row formQuestion">
+					<label for="price">Price</label>
+					<input type="number" name="price"  id="price" placeholder = "0.00" step="0.01">
+				</div>
+				<div class="row formQuestion">
+					<label>Is it on sale?</label>
+					<input type="radio" name="isSale" id="isSaleYes" value="1"><label for="isSaleYes" required>Yes</label><br>
+					<input type="radio" name="isSale" id="isSaleNo" value="0"><label for="isSaleNo" required>No</label><br>
+				</div>
+		        <div class="row formQuestion">
+		        	<input class="btn btn-success" type="submit" value="Submit">
+		        </div>
+		        <!-- The database will auto generate a timestamp upon insertion to the database -->
+			</form>
+		</div>
+	</body>
+</html>

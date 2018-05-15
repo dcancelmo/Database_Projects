@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Search Shoes</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Daniel Cancelmo; dcancelm">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Our CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styles_custom.css">
+		<!-- Normalize CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-lg px-3 my-5 markdown-body">
+			<h1>Search for a shoe by any attribute</h1>
+			<button class="btn btn-sm btn-info" id="return" onclick="window.location.replace('index.html')">Go back</button>
+			<form action="php/search-shoe.php" method = "post">
+				<div class="row formQuestion">
+					
+				</div>
+				<div class="row formQuestion">
+					<label for="pID">Product ID #</label><input type="text" name="pID" id="pID" placeholder = "Product ID">
+				</div>
+				<div class="row formQuestion">
+					<label for="name">Name</label>
+					<input type="text" name="name"  id="name" placeholder = "Product name">
+				</div>
+				<div class="row formQuestion">
+					<label for="brand">Brand name</label>
+					<input type="text" name="brand"  id="brand" placeholder = "Brand name">
+				</div>
+				<div class="row formQuestion">
+					<label>Category</label>
+					<div>
+						<input type="radio" name="category" id="formal" value="Formal"><label for="formal">Formal</label><br>
+						<input type="radio" name="category" id="casual" value="Casual"><label for="casual">Casual</label><br>
+						<input type="radio" name="category" id="athletic" value="Atheltic"><label for="athletic">Athletic</label><br>
+					</div>
+				</div>
+				<div class="row formQuestion">
+					<label>Color</label><!-- brown, black, red, beige, grey, blue, pink, white -->
+					<div>
+						<div class="inline">
+							<input type="radio" name="color" id="black" value="Black"><label for="black">Black</label><br>
+							<input type="radio" name="color" id="brown" value="Brown"><label for="brown">Brown</label><br>
+							<input type="radio" name="color" id="red" value="Red"><label for="red">Red</label><br>
+							<input type="radio" name="color" id="beige" value="Beige"><label for="beige">Beige</label><br>
+						</div>
+						<div class="inline">
+							<input type="radio" name="color" id="grey" value="Grey"><label for="grey">Grey</label><br>
+							<input type="radio" name="color" id="blue" value="Blue"><label for="blue">Blue</label><br>
+							<input type="radio" name="color" id="pink" value="Pink"><label for="pink">Pink</label><br>
+							<input type="radio" name="color" id="white" value="White"><label for="white">White</label><br>
+						</div>
+					</div>
+				</div>
+		        <div class="row formQuestion">
+		        	<input class="btn btn-success" type="submit" value="Submit">
+		        </div>
+			</form>
+		</div>
+	</body>
+</html>
